@@ -39,7 +39,7 @@ Los rastros que deja una búsqueda cuando se registra: la dirección de una pág
 
 Fuera de estas seis excepciones, ningún registro guarda qué se consultó junto a quién lo consultó:
 
-1. **Un informe que compras:** el pedido nombra la empresa, para poder entregarlo.
+1. **Un informe que compras:** el pedido nombra la empresa, para poder prepararlo y entregarlo. Se guarda cifrada en nuestros servidores; una persona de nuestro equipo solo la consulta si el pedido necesita cuentas anuales gestionadas a mano o si nos pides ayuda, y cada consulta queda anotada en el pedido.
 2. **Lo que guardas tú:** tus historias se guardan solo en tu navegador, o en el archivo que descargas, y no nos llegan. Las empresas vigiladas y las alertas que activas se guardan en tu cuenta, porque son tuyas por diseño.
 3. **Lo que nos envías:** las solicitudes de verificación y los mensajes de contacto contienen lo que escribiste.
 4. **Peticiones rechazadas de máquinas:** se guardan 90 días como registros de seguridad, con lo que pedían.
@@ -95,7 +95,7 @@ The shapes a search leaves when it is recorded: a company page address instead o
 
 Outside these six exceptions, no record keeps what was looked up together with who looked it up:
 
-1. **A report you buy:** the order names the company, so that it can be delivered.
+1. **A report you buy:** the order names the company, so that the report can be prepared and delivered. It is stored encrypted on our servers; a person on our team looks at it only if the order needs annual accounts handled by hand or you ask us for help, and every look is recorded in the order.
 2. **What you save yourself:** your stories are kept only in your browser, or in the file you download, and never reach us. The companies you monitor and the alerts you switch on are kept in your account, because they are yours by design.
 3. **What you send us:** verification requests and contact messages hold what you wrote.
 4. **Refused machine requests:** kept 90 days as security records, with what they asked for.
