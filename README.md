@@ -40,7 +40,7 @@ Los rastros que deja una búsqueda cuando se registra: la dirección de una pág
 Fuera de estas seis excepciones, ningún registro guarda qué se consultó junto a quién lo consultó:
 
 1. **Un informe que compras:** el pedido nombra la empresa, para poder entregarlo.
-2. **Lo que guardas en tu cuenta:** historias, empresas vigiladas y alertas son tuyas por diseño.
+2. **Lo que guardas tú:** tus historias se guardan solo en tu navegador, o en el archivo que descargas, y no nos llegan. Las empresas vigiladas y las alertas que activas se guardan en tu cuenta, porque son tuyas por diseño.
 3. **Lo que nos envías:** las solicitudes de verificación y los mensajes de contacto contienen lo que escribiste.
 4. **Peticiones rechazadas de máquinas:** se guardan 90 días como registros de seguridad, con lo que pedían.
 5. **Contadores del límite de uso del día:** huellas con clave (HMAC-SHA-256) de lo abierto hoy, nunca nombres. La clave cambia cada día UTC y se borra al acabar el día con el contador; Cloudflare puede recuperar ese almacenamiento hasta 30 días.
@@ -96,7 +96,7 @@ The shapes a search leaves when it is recorded: a company page address instead o
 Outside these six exceptions, no record keeps what was looked up together with who looked it up:
 
 1. **A report you buy:** the order names the company, so that it can be delivered.
-2. **What you save to your account:** stories, monitored companies and alerts are yours by design.
+2. **What you save yourself:** your stories are kept only in your browser, or in the file you download, and never reach us. The companies you monitor and the alerts you switch on are kept in your account, because they are yours by design.
 3. **What you send us:** verification requests and contact messages hold what you wrote.
 4. **Refused machine requests:** kept 90 days as security records, with what they asked for.
 5. **Today's usage-limit counters:** keyed fingerprints (HMAC-SHA-256) of what was opened today, never names. The key changes every UTC day and is deleted with the counter at the end of the day; Cloudflare can restore that storage for up to 30 days.
