@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-15",
+  "run_at": "2026-10-15T06:10:04.420Z",
+  "fingerprint": "6afe8c82b3d5e14dbaca1d14e9d6acef22c4b5ee41a9405be562587670288462",
+  "components": {
+    "site": {
+      "sha": "57752468f102da3da4bc90c20a8a8cc1de11214a",
+      "hash": "2c2e7434fdc96596c3dbae716e9cff40e1bfd39f517457f38a5066c36fec3ba9",
+      "lines": 367
+    },
+    "worker": {
+      "versions": {
+        "api-proxy": [
+          "ca537035-866f-4a83-bb33-923a8667618c"
+        ],
+        "borme-mcp": [
+          "297251cd-a2d9-461c-b179-96ba1eb0e7d5"
+        ],
+        "stripe-handler": [
+          "04ed2076-4c0a-4f64-9f23-9d9544eb7b34"
+        ]
+      },
+      "hash": "80e064f6e6badf2b645c105049fd1e79164f57a06a471ced1f56d952178f0cc0",
+      "lines": 944
+    },
+    "backend": {
+      "head": "6d5f9186393d658ed82dc7f9f3c06778766ddb99",
+      "files": 230,
+      "untracked": 9,
+      "hash": "ccbc9051299d3d704c15bd4d8c74a0574b20ec9628102c7b45fc8111ebef590f",
+      "lines": 3535
+    },
+    "server_config": {
+      "hash": "377a755b9c36f97f388a23627dc36046abc26012b5038a58a951986e69579677",
+      "lines": 355
+    },
+    "outside": {
+      "hash": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+      "lines": 6
+    }
+  },
+  "baseline_test": {
+    "date": "2026-10-13",
+    "fingerprint": "48e25b6fc155dfb02c10b64465f2ed95067fa7608921cfcb9b18cc7ad7d91f6c"
+  },
+  "unchanged": false,
+  "review": {
+    "stores": {
+      "cloudflare:ncdata.eu": {
+        "read": true,
+        "findings": 2644,
+        "early_hints": 5,
+        "neutral": 0,
+        "sampled": true,
+        "truncated": false
+      },
+      "ae:site_events": {
+        "read": true,
+        "findings": 0,
+        "truncated": false
+      },
+      "ga4": {
+        "read": true,
+        "findings": 0,
+        "truncated": false,
+        "delay_h": 24
+      },
+      "server:/home/alex/bormes/logs/gunicorn_access.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0,
+        "untimed": 272582
+      },
+      "server:/home/alex/bormes/logs/gunicorn_error.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0
+      },
+      "server:/home/alex/bormes/logs/borme_search.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0
+      },
+      "server:/var/log/borme/borme_search.out*": {
+        "read": true,
+        "files": 6,
+        "findings": 0
+      },
+      "server:/var/log/borme/borme_search.err*": {
+        "read": true,
+        "files": 6,
+        "findings": 0
+      },
+      "server:/var/log/boe/boe_search.out*": {
+        "read": true,
+        "files": 2,
+        "findings": 0,
+        "untimed": 2
+      },
+      "server:/var/log/boe/boe_search.err*": {
+        "read": true,
+        "files": 2,
+        "findings": 0,
+        "untimed": 2
+      },
+      "server:/var/log/boe/*.log*": {
+        "read": true,
+        "files": 2,
+        "findings": 0
+      },
+      "server:/var/log/nginx/access.log*": {
+        "read": true,
+        "files": 15,
+        "findings": 0
+      },
+      "server:/var/log/nginx/error.log*": {
+        "read": true,
+        "files": 15,
+        "findings": 0,
+        "untimed": 148
+      },
+      "server:/var/log/nginx/mapasocietario/access.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0
+      },
+      "server:/var/log/nginx/mapasocietario/refusals.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0
+      },
+      "server:/var/log/nginx/mapasocietario_access.log*": {
+        "read": true,
+        "files": 0,
+        "findings": 0
+      },
+      "server:/var/log/nginx/mapasocietario_error.log*": {
+        "read": true,
+        "files": 1,
+        "findings": 0
+      },
+      "server:/var/log/nginx/rag/access.log*": {
+        "read": true,
+        "files": 5,
+        "findings": 0
+      },
+      "server:/var/log/nginx/rag_access.log*": {
+        "read": true,
+        "files": 0,
+        "findings": 0
+      },
+      "server:/var/log/nginx/rag_error.log*": {
+        "read": true,
+        "files": 1,
+        "findings": 0
+      },
+      "server:/var/log/nginx/borme-enumeration.log*": {
+        "read": true,
+        "files": 6,
+        "findings": 0
+      },
+      "server:/var/log/postgresql/postgresql-16-main.log*": {
+        "read": true,
+        "files": 1,
+        "findings": 0
+      },
+      "server:/var/log/elasticsearch/*_index_search_slowlog*": {
+        "read": true,
+        "files": 3,
+        "findings": 0
+      }
+    }
+  },
+  "prev_hash": "39d284a7815705b9daf6f166094203ad2512d80f5d121bfc99e51034bfcdcce2",
+  "entry_hash": "3933a64a376da2353de4009f4241fb063ec9d678bce95e4c02f54872e0776947"
+}
