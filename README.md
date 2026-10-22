@@ -27,7 +27,7 @@ Cuando `unchanged` es `false`, el código o la configuración que determinan qu�
 
 ### Qué abarca la huella
 
-- Cada línea desplegada de nuestro código que escribe un registro: líneas de log, eventos de analítica, escrituras en almacenes de datos (bases de datos, almacenes clave-valor, almacenamiento de objetos y cachés) y configuración de registros, en la web, el worker de la API y el backend (todo el código que ejecutan los servicios de nuestro servidor y las propias definiciones de esos servicios: un servicio nuevo cambia la huella).
+- Las líneas de nuestro código desplegado que escriben un registro de las formas que la huella reconoce: líneas de log, eventos de analítica, escrituras en almacenes de datos (bases de datos, almacenes clave-valor, almacenamiento de objetos y cachés) y configuración de registros, en la web, el worker de la API y el backend (todo el código que ejecutan los servicios de nuestro servidor y las propias definiciones de esos servicios: un servicio nuevo cambia la huella). Un registro escrito de otra forma no cambia la huella; la revisión diaria de los registros y la prueba completa lo detectan igualmente, porque leen lo que se ha guardado, no el código.
 - La configuración de registros de nuestro servidor: formatos de los registros del servidor web, rotación de registros y configuración de los registros de las aplicaciones y las bases de datos.
 - La configuración de servicios externos que podrían registrar datos en nuestro nombre: recogida y conservación de datos de Google Analytics y configuración de registros de Cloudflare.
 
@@ -83,7 +83,7 @@ When `unchanged` is `false`, the code or settings that decide what we record hav
 
 ### What the fingerprint covers
 
-- Every deployed line of our code that writes a record: log lines, analytics events, data-store writes (databases, key-value stores, object storage, caches) and logging configuration, in the website, the API worker and the backend (all the code our server's services run, and the service definitions themselves: a new service changes the fingerprint).
+- The lines of our deployed code that write a record in the ways the fingerprint recognises: log lines, analytics events, data-store writes (databases, key-value stores, object storage, caches) and logging configuration, in the website, the API worker and the backend (all the code our server's services run, and the service definitions themselves: a new service changes the fingerprint). A record written some other way does not change the fingerprint; the daily review of the records and the full test still find it, because they read what was stored, not the code.
 - The logging configuration of our server: web server log formats, log rotation, application and database log settings.
 - The settings of outside services that could record on our behalf: Google Analytics data collection and retention, Cloudflare log settings.
 
