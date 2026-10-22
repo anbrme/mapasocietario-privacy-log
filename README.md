@@ -17,7 +17,7 @@ Cada día publicamos aquí una huella de todo lo que decide qué registra [Mapa 
 | `fingerprint` | SHA-256 del conjunto de código y configuración que determina qué se registra (descrito más abajo), tal como estaba desplegado ese día. |
 | `baseline_test` | La fecha de la última prueba completa y la huella sobre la que se ejecutó. |
 | `unchanged` | `true` cuando la huella de hoy coincide con la de la última prueba completa. |
-| `review` | Recuentos de la revisión de los registros de las últimas 24 horas, por almacén. Un `0` en todos significa que ningún registro guarda quién buscó qué. Un almacén que no se pudo leer indica `read: false`; nunca se contabiliza como `0`. En `cloudflare:ncdata.eu`, `refused` cuenta las peticiones con un nombre o una clave en la dirección que la API rechazó, o que el navegador no llegó a enviar. Las mandan otros programas, no nuestra web ni nuestra aplicación, y no cuentan como hallazgos. |
+| `review` | Recuentos de la revisión de los registros de las últimas 24 horas, por almacén. Un `0` en todos significa que ningún registro guarda quién buscó qué. Un almacén que no se pudo leer indica `read: false`; nunca se contabiliza como `0`. En `cloudflare:ncdata.eu`, `refused` cuenta las peticiones con un nombre o una clave en la dirección que la API rechazó, o que el navegador no llegó a enviar; no cuentan como hallazgos. |
 | `prev_hash` | El `entry_hash` de la entrada anterior. |
 | `entry_hash` | SHA-256 de esta entrada sin `entry_hash`, con las claves ordenadas. |
 
@@ -42,7 +42,7 @@ Fuera de estas seis excepciones, ningún registro guarda qué se consultó junto
 1. **Un informe que compras:** el pedido nombra la empresa, para poder prepararlo y entregarlo. Se guarda cifrada en nuestros servidores; una persona de nuestro equipo solo la consulta si el pedido necesita cuentas anuales gestionadas a mano o si nos pides ayuda, y cada consulta queda anotada en el pedido.
 2. **Lo que guardas tú:** tus historias se guardan solo en tu navegador, o en el archivo que descargas, y no nos llegan. Las empresas vigiladas y las alertas que activas se guardan en tu cuenta, porque son tuyas por diseño.
 3. **Lo que nos envías:** las solicitudes de verificación y los mensajes de contacto contienen lo que escribiste.
-4. **Peticiones rechazadas:** las guardamos 90 días como registros de seguridad, con lo que pedían. Nuestro proveedor de red (Cloudflare) anota además durante 31 días cada petición que llega a la API, también las que rechazamos; si otro programa escribe un nombre en la dirección, queda ahí. La revisión diaria las cuenta aparte (`refused`).
+4. **Peticiones rechazadas:** las guardamos 90 días como registros de seguridad, con lo que pedían. Nuestro proveedor de red (Cloudflare) anota además durante 31 días cada petición que llega a la API, también las que rechazamos. La revisión diaria las cuenta aparte (`refused`).
 5. **Contadores del límite de uso del día:** huellas con clave (HMAC-SHA-256) de lo abierto hoy, nunca nombres. La clave cambia cada día UTC y se borra al acabar el día con el contador; Cloudflare puede recuperar ese almacenamiento hasta 30 días.
 6. **El recuento de demanda**, que decide qué páginas de empresa mostramos a los buscadores: por cada empresa, el número de días (UTC) en que la abrieron al menos tres visitantes distintos, y el mes del primero. Ni quién, ni a qué hora, ni una serie por días.
 
@@ -73,7 +73,7 @@ Every day we publish here a fingerprint of everything that decides what [Mapa So
 | `fingerprint` | SHA-256 of the recording surface (below), as deployed that day. |
 | `baseline_test` | The date of the last full test, and the fingerprint it ran against. |
 | `unchanged` | `true` when today's fingerprint equals the one the last full test ran against. |
-| `review` | Counts from the 24-hour review of our records, per store. `0` everywhere means no record keeps who searched what. A store that could not be read says `read: false`; it never counts as `0`. In `cloudflare:ncdata.eu`, `refused` counts requests with a name or key in the address that the API refused, or that the browser never sent. Other programs send them, not our website or app, and they do not count as findings. |
+| `review` | Counts from the 24-hour review of our records, per store. `0` everywhere means no record keeps who searched what. A store that could not be read says `read: false`; it never counts as `0`. In `cloudflare:ncdata.eu`, `refused` counts requests with a name or key in the address that the API refused, or that the browser never sent; they do not count as findings. |
 | `prev_hash` | `entry_hash` of the previous entry. |
 | `entry_hash` | SHA-256 of this entry without `entry_hash`, keys sorted. |
 
@@ -98,7 +98,7 @@ Outside these six exceptions, no record keeps what was looked up together with w
 1. **A report you buy:** the order names the company, so that the report can be prepared and delivered. It is stored encrypted on our servers; a person on our team looks at it only if the order needs annual accounts handled by hand or you ask us for help, and every look is recorded in the order.
 2. **What you save yourself:** your stories are kept only in your browser, or in the file you download, and never reach us. The companies you monitor and the alerts you switch on are kept in your account, because they are yours by design.
 3. **What you send us:** verification requests and contact messages hold what you wrote.
-4. **Refused requests:** we keep them for 90 days as security records, with what they asked for. Our network provider (Cloudflare) also notes, for 31 days, every request that reaches the API, including the ones we refuse; if another program writes a name in the address, it stays there. The daily review counts them apart (`refused`).
+4. **Refused requests:** we keep them for 90 days as security records, with what they asked for. Our network provider (Cloudflare) also notes, for 31 days, every request that reaches the API, including the ones we refuse. The daily review counts them apart (`refused`).
 5. **Today's usage-limit counters:** keyed fingerprints (HMAC-SHA-256) of what was opened today, never names. The key changes every UTC day and is deleted with the counter at the end of the day; Cloudflare can restore that storage for up to 30 days.
 6. **The demand tally**, which decides which company pages we show to search engines: for each company, the number of UTC days on which at least three distinct visitors opened it, and the month of the first. Not who, not when in the day, no day-by-day series.
 
