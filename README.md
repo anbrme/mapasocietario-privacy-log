@@ -54,7 +54,9 @@ Fuera de estas seis excepciones, ningún registro guarda qué se consultó junto
 node verify.mjs
 ```
 
-El programa vuelve a calcular cada `entry_hash` y comprueba que cada `prev_hash` coincide con el de la entrada anterior. Requiere Node 18 o posterior, sin dependencias.
+El programa vuelve a calcular cada `entry_hash` y comprueba que cada `prev_hash` coincide con el de la entrada anterior. Requiere Node 18 o posterior, sin dependencias. Una cadena íntegra muestra que las entradas no se han alterado respecto a una copia que hayas guardado antes; quien controle el repositorio podría recalcular una cadena entera, y por eso conviene comparar con una copia anterior.
+
+Estas comprobaciones las opera Mapa Societario. Cualquiera puede verificar la integridad de los informes publicados; esa verificación no demuestra por sí sola que se haya revisado cualquier lugar donde algo pudiera registrarse. Por eso publicamos qué cubre cada comprobación y qué no.
 
 Contacto: mapasocietario@ncdata.eu · Nurnberg Consulting SL
 
@@ -110,6 +112,8 @@ Outside these six exceptions, no record keeps what was looked up together with w
 node verify.mjs
 ```
 
-It recomputes every `entry_hash` and checks that each `prev_hash` matches the entry before it. Node 18 or later, no dependencies.
+It recomputes every `entry_hash` and checks that each `prev_hash` matches the entry before it. Node 18 or later, no dependencies. An intact chain shows that the entries have not been altered relative to a copy you kept earlier; whoever controls the repository could recompute a whole chain, which is why comparing with an earlier copy matters.
+
+These checks are operated by Mapa Societario. Anyone can verify the integrity of the published reports; that verification does not by itself establish that every possible logging location was inspected. That is why we publish what each check covers and what it does not.
 
 Contact: mapasocietario@ncdata.eu · Nurnberg Consulting SL
