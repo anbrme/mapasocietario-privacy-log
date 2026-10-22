@@ -1,5 +1,7 @@
 # Mapa Societario: registro diario de privacidad / daily privacy log
 
+<img src="status.svg" width="680" alt="Resultado de la última comprobación diaria / latest daily check result">
+
 [Español](#español) · [English](#english)
 
 ## Español
