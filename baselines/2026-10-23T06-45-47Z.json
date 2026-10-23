@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-23",
+  "fingerprint": "b6e7ae423672de6fa99f29edb4f1f8c2ba006a1648c0ea492f524ed4e69919cd",
+  "components": {
+    "site": "af70e0d0f889fb448954735f4637700d3910bbaa40c6bbabecd98e9167fe7fcb",
+    "worker": "0e0a628c67f2d51d315a579398de16539575a27302856e7c364cd62a678b8a9c",
+    "backend": "b9ef496dd59558b6b71c963b6786129a7bd278e0e51ddece67f31ee19dc3470c",
+    "server_config": "e172aac36a8d6fb5b6e4e3447132e84d5a5f78ea0bafbd91e51856ef97e6edae",
+    "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+    "checker": "d71c98831cd81f2ae68e420c984777145129729c53799bbca4cc786c84a57b62"
+  },
+  "set_at": "2026-10-23T06:45:47.079Z",
+  "reason": "Full test after #298, #301 and the checker component"
+}
