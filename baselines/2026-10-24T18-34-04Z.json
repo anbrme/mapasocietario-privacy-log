@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-24",
+  "fingerprint": "d2a4342322363effb6eac34aa4e56362188a1d60367a20bc8b2a6a5ff708e792",
+  "components": {
+    "site": "f8a06fbf7d01c2faadb0efa801f59d19a37cdf35289d3df63b43976c6676678e",
+    "worker": "f5d7a9ed42fb79cbb97f6744ad8a01a74ae59ad2c2dc7aacc94f1976332b1dbf",
+    "backend": "9299fe222907e6c54e93d09273b246d58b727614bb9bdf682803a19ec215f127",
+    "server_config": "918c2754f5db09f864a6c43d968031a90775db8040f0dc4b12d43afa6aa842f9",
+    "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+    "checker": "0fde31357ae29ad0fbebcd7d7344d1fe85d712b976e7c776a3e117acebace9d0"
+  },
+  "set_at": "2026-10-24T18:34:04.953Z",
+  "reason": "Full test after firm seats, deployed closed: site and Workers (#324)"
+}
