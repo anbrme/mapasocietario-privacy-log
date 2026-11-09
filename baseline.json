@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-06",
-  "fingerprint": "dbeec2b10b39dfb1e7283371a4f423861a3c70aed16a22ae21b0c34b4104e051",
+  "date": "2026-11-09",
+  "fingerprint": "3c716c0d9b0e0fe289498791fc07ce82b4752c418bc5202fcdf06f96ffafd99d",
   "components": {
-    "site": "536067d1ab1bbe842e528d869ee74936661c3c76099261cc5a9dc83ac49acbf1",
-    "worker": "0b0b9da773b3469aebac54a365eddb78192a6759edc8eb773a652c0524e33e68",
-    "backend": "e8daf324336f3ce7cc54e55929e925e11aa9db1ae82b63dca85a136172fa6a38",
+    "site": "c3329792a86fd5c516823496d58cc2a425c106cd7af331f42097de9e92245bdc",
+    "worker": "7d1c4bb2a579a133151195364bdadf5b42343a09f6ac3f7c8bd7ec3339421a3c",
+    "backend": "a96540e808cf2aeb135a4a4135648da315cf42666a76b56fffe134425a46ef26",
     "server_config": "5663cbf053eb3e2b2f679dfcc916ad8dd7fa60738ec9c791f68044740d48f1d6",
     "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
     "checker": "0fde31357ae29ad0fbebcd7d7344d1fe85d712b976e7c776a3e117acebace9d0"
   },
-  "set_at": "2026-11-06T08:31:54.848Z",
-  "reason": "Full test of 2026-11-06 after site #401, #407 and #408"
+  "set_at": "2026-11-09T23:58:31.853Z",
+  "reason": "Full test of 2026-11-09 after site #412 to #439, backend and worker changes of 11-08 and 11-09"
 }
