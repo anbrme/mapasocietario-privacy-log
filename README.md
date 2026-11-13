@@ -19,6 +19,8 @@ Cada día publicamos aquí una huella de todo lo que decide qué registra [Mapa 
 | `fingerprint` | SHA-256 del conjunto de código y configuración que determina qué se registra (descrito más abajo), tal como estaba desplegado ese día. |
 | `baseline_test` | La fecha de la última prueba completa y la huella sobre la que se ejecutó. |
 | `unchanged` | `true` cuando la huella de hoy coincide con la de la última prueba completa. |
+| `changed` | Los componentes cuya huella difiere de la de la última prueba completa (`site`, `worker`, `backend`, `server_config`, `outside`, `checker`). Vacío cuando `unchanged` es `true`. Desde el 13 de noviembre de 2026. |
+| `removed_only` | De esos componentes, los que desde la última prueba completa solo han perdido llamadas de log o de analítica: no se ha añadido ni cambiado ninguna línea, y cada línea quitada es una de esas llamadas. Desde el 13 de noviembre de 2026. |
 | `review` | Recuentos de la revisión de los registros de las últimas 24 horas, por almacén. Un `0` en todos significa que ningún registro guarda quién buscó qué. Un almacén que no se pudo leer indica `read: false`; nunca se contabiliza como `0`. En `cloudflare:ncdata.eu`, `refused` cuenta las peticiones con un nombre o una clave en la dirección que la API rechazó, o que el navegador no llegó a enviar; no cuentan como hallazgos. |
 | `hourly` | El archivo horario del día anterior que esta entrada ancla: su fecha, su número de líneas y el `entry_hash` de su última línea (ver «Comprobación cada hora»). |
 | `prev_hash` | El `entry_hash` de la entrada anterior. |
@@ -26,9 +28,13 @@ Cada día publicamos aquí una huella de todo lo que decide qué registra [Mapa 
 
 Cuando `unchanged` es `false`, el código o la configuración que determinan qué registramos han cambiado desde la última prueba completa. La entrada lo indica y seguirá haciéndolo hasta que se ejecute una nueva prueba completa.
 
+Si todos los componentes de `changed` están en `removed_only`, lo único que ha cambiado es que hemos quitado llamadas de log o de analítica. Eso solo puede reducir lo que registramos, así que no exige una nueva prueba completa, y la entrada, la tarjeta de estado y la insignia de la web lo dicen así. Quitar cualquier otra línea (un ajuste que desactiva o silencia registros, un paso que borra o depura datos, el consentimiento de analítica denegado por defecto, una exclusión en los registros del servidor web) cuenta como un cambio y exige la prueba completa. Para comparar, el comprobador guarda en nuestro servidor la lista de líneas de la última prueba completa; esa lista no se publica.
+
 ### Qué abarca la huella
 
 - Las líneas de nuestro código desplegado que escriben un registro de las formas que la huella reconoce: líneas de log, eventos de analítica, escrituras en almacenes de datos (bases de datos, almacenes clave-valor, almacenamiento de objetos y cachés) y configuración de registros, en la web, el worker de la API y el backend (todo el código que ejecutan los servicios de nuestro servidor y las propias definiciones de esos servicios: un servicio nuevo cambia la huella). Un registro escrito de otra forma no cambia la huella; la revisión diaria de los registros y la prueba completa lo detectan igualmente, porque leen lo que se ha guardado, no el código.
+- No cuentan, porque no salen del dispositivo del visitante: las líneas de consola y de almacenamiento del navegador (localStorage, IndexedDB, Cache API) en el código de la web que solo se ejecuta en el navegador. Sí cuentan, en ese mismo código, los eventos de analítica y los envíos con `sendBeacon`, y cuenta todo el código que ejecutan nuestras funciones de servidor, incluido el que comparten con la web.
+- En el worker de la API, las líneas de consola cuentan solo si Cloudflare conserva sus registros (registros de observabilidad, Logpush o un consumidor de registros). Si no se puede leer esa configuración, cuentan.
 - La configuración de registros de nuestro servidor: formatos de los registros del servidor web, rotación de registros y configuración de los registros de las aplicaciones y las bases de datos.
 - La configuración de servicios externos que podrían registrar datos en nuestro nombre: recogida y conservación de datos de Google Analytics y configuración de registros de Cloudflare.
 - El propio comprobador (`checker`): el SHA-256 del programa que hace esta comprobación, que contiene las reglas de detección. Si cambia el comprobador, cambia la huella.
@@ -109,6 +115,8 @@ Every day we publish here a fingerprint of everything that decides what [Mapa So
 | `fingerprint` | SHA-256 of the recording surface (below), as deployed that day. |
 | `baseline_test` | The date of the last full test, and the fingerprint it ran against. |
 | `unchanged` | `true` when today's fingerprint equals the one the last full test ran against. |
+| `changed` | The components whose hash differs from the last full test (`site`, `worker`, `backend`, `server_config`, `outside`, `checker`). Empty when `unchanged` is `true`. Since 13 November 2026. |
+| `removed_only` | Of those components, the ones that since the last full test have only lost log or analytics calls: no line was added or changed, and every line removed is one of those calls. Since 13 November 2026. |
 | `review` | Counts from the 24-hour review of our records, per store. `0` everywhere means no record keeps who searched what. A store that could not be read says `read: false`; it never counts as `0`. In `cloudflare:ncdata.eu`, `refused` counts requests with a name or key in the address that the API refused, or that the browser never sent; they do not count as findings. |
 | `hourly` | The previous day's hourly file this entry anchors: its date, its number of lines and its last line's `entry_hash` (see “Hourly check”). |
 | `prev_hash` | `entry_hash` of the previous entry. |
@@ -116,9 +124,13 @@ Every day we publish here a fingerprint of everything that decides what [Mapa So
 
 When `unchanged` is `false`, the code or settings that decide what we record have changed since the last full test. The entry says so, and stays that way until a new full test has run.
 
+If every component in `changed` is also in `removed_only`, the only change is that we removed log or analytics calls. That can only reduce what we record, so it does not need a new full test, and the entry, the status card and the badge on the site say so. Removing any other line (a setting that turns logs off or quiets them, a step that deletes or scrubs data, analytics consent denied by default, an exclusion in the web server's logs) counts as a change and needs the full test. To compare, the checker keeps the list of lines from the last full test on our server; that list is not published.
+
 ### What the fingerprint covers
 
 - The lines of our deployed code that write a record in the ways the fingerprint recognises: log lines, analytics events, data-store writes (databases, key-value stores, object storage, caches) and logging configuration, in the website, the API worker and the backend (all the code our server's services run, and the service definitions themselves: a new service changes the fingerprint). A record written some other way does not change the fingerprint; the daily review of the records and the full test still find it, because they read what was stored, not the code.
+- Not counted, because they never leave the visitor's device: console and browser storage lines (localStorage, IndexedDB, Cache API) in website code that runs only in the browser. In that same code, analytics events and `sendBeacon` calls still count, and all the code our server functions run counts, including what they share with the website.
+- In the API worker, console lines count only if Cloudflare keeps their logs (observability logs, Logpush or a tail consumer). If those settings cannot be read, they count.
 - The logging configuration of our server: web server log formats, log rotation, application and database log settings.
 - The settings of outside services that could record on our behalf: Google Analytics data collection and retention, Cloudflare log settings.
 - The checker itself (`checker`): the SHA-256 of the program that runs this check, which holds the detection rules. If the checker changes, the fingerprint changes.
