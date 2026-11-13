@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-13",
+  "fingerprint": "96d8e96aae7ea64c71cb1fdc29ebb28162a62b6660560c2c00186c293b64b10d",
+  "components": {
+    "site": "ef8c6f57e39d198b0f0b81eafb62dd73794d5927a22bdadc52c242bef0b8d051",
+    "worker": "a72eca27b81d020cb2db93dd78947a6ecf9989db674407fa3b4fd12e54d8e022",
+    "backend": "84a1d68afdb077b15e81e1632e3bfe2838f65ade501f492999ff130adf9f16f2",
+    "server_config": "0c92ad02dd17eb9732eb7555f1bed6452b74e27b624842fc489830e66ba1db43",
+    "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+    "checker": "0a12bebaf4f7c7567b04436b3a09def312b3f9663c6fd2ccdff5abf7463553a5"
+  },
+  "set_at": "2026-11-13T08:05:51.179Z",
+  "reason": "Full test of 2026-11-13 after site #411 and #442 to #494 (front shield, fingerprint rules 1-3), backend and worker changes of 11-10 to 11-13"
+}
