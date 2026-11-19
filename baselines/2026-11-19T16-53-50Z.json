@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-19",
+  "fingerprint": "87bb393717f92714b96326adaf2a31af1f509548e772b721a5ce1fb20aab458b",
+  "components": {
+    "site": "ef8c6f57e39d198b0f0b81eafb62dd73794d5927a22bdadc52c242bef0b8d051",
+    "worker": "2d811b804d14d520b710b7f8abeee4a059696a62405113c3638d27bf0936c02a",
+    "backend": "84a1d68afdb077b15e81e1632e3bfe2838f65ade501f492999ff130adf9f16f2",
+    "server_config": "0c92ad02dd17eb9732eb7555f1bed6452b74e27b624842fc489830e66ba1db43",
+    "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+    "checker": "0a12bebaf4f7c7567b04436b3a09def312b3f9663c6fd2ccdff5abf7463553a5"
+  },
+  "set_at": "2026-11-19T16:53:50.305Z",
+  "reason": "Full test of 2026-11-19 after site #535 and #536 and the API worker changes of 2026-11-17 and 2026-11-18"
+}
