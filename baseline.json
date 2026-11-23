@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-22",
-  "fingerprint": "8a66b5f685178166f1bf9cc9e842730339f9cc68717c0f48f56902bc3230fe34",
+  "date": "2026-11-23",
+  "fingerprint": "dee6bb67dfd29c1aa2db578f939def28ec81692f35f8706cc7e7003623309b5b",
   "components": {
-    "site": "5394e9e3df5d89733bbae4357070a8fc1d6acbe33277e853c7eda75b23fe1e88",
-    "worker": "59692b03b45e25fd27b2557949ca7ae24101d42316be8fc2cb815cd91a688c30",
+    "site": "5651386b74e8d2e21ac682ae553f7a06daf72a94cdc6ae09c98131203fbefd2f",
+    "worker": "3d84bd8b5e1a0172fa3028d4d3bcb84d8c1bf7327c02ea8d686504f9b40c1576",
     "backend": "d82d48395fa2c375350f07afb3e41d0e740413fdbe8ccf38e895501cc965392a",
     "server_config": "0c92ad02dd17eb9732eb7555f1bed6452b74e27b624842fc489830e66ba1db43",
     "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
     "checker": "0a12bebaf4f7c7567b04436b3a09def312b3f9663c6fd2ccdff5abf7463553a5"
   },
-  "set_at": "2026-11-22T11:47:23.799Z",
-  "reason": "Full test of 2026-11-22 after site #538 to #560, the API worker changes of 2026-11-20 and the backend changes of 2026-11-20 and 2026-11-21"
+  "set_at": "2026-11-23T23:24:46.219Z",
+  "reason": "Full test of 2026-11-23 after site #561 to #565 and the API worker changes of 2026-11-23"
 }
