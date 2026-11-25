@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-23",
+  "fingerprint": "9fe452d37989f63d08f17ecd0f494588b2f0e4ed1876f621daf8b13f23ac08c3",
+  "components": {
+    "site": "5651386b74e8d2e21ac682ae553f7a06daf72a94cdc6ae09c98131203fbefd2f",
+    "worker": "3d84bd8b5e1a0172fa3028d4d3bcb84d8c1bf7327c02ea8d686504f9b40c1576",
+    "backend": "d82d48395fa2c375350f07afb3e41d0e740413fdbe8ccf38e895501cc965392a",
+    "server_config": "0c92ad02dd17eb9732eb7555f1bed6452b74e27b624842fc489830e66ba1db43",
+    "outside": "002e9d960c96ce34288d0618425c2407802df5b460b5e5d3bbd4886cd300d7bf",
+    "checker": "1e4dc8328c4252f0dd0ffcee31c6d7e1bb2d326ed6e8d60366657438eaafb456"
+  },
+  "set_at": "2026-11-25T00:15:20.098Z",
+  "reason": "Checker only: refused requests counted apart in server logs (#577); last full test 2026-11-23"
+}
