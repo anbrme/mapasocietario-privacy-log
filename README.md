@@ -66,6 +66,10 @@ Las líneas horarias se publican durante el día; su protección con marcas de t
 
 `baseline.json` es la última prueba completa: su fecha, su huella, las huellas de cada componente y el motivo del cambio (`reason`). Cada línea base queda además en `baselines/<momento>.json`, que nunca se sobrescribe: el historial de cuándo y por qué cambió la línea base es público.
 
+### Notas
+
+`notes.json` explica, en español e inglés, por qué el sello de un día no está en verde: `{ "notes": [{ "date": "AAAA-MM-DD", "es": "…", "en": "…" }] }`. Las escribe el responsable, a mano, sin nombres de empresas ni de personas. El sello y la página «Cómo comprobamos» muestran la nota de la fecha de la última entrada solo mientras el sello no está en verde. Una nota no forma parte de la cadena ni cambia ningún recuento ni el color: es una explicación, no un resultado.
+
 ### Marcas de tiempo (RFC 3161)
 
 Cada entrada diaria lleva marcas de tiempo de dos autoridades independientes, FreeTSA y DigiCert, sobre su `entry_hash`, en `timestamps/<fecha>.<autoridad>.tsr`. Una marca de tiempo certifica que esa huella existía en ese momento; no certifica el contenido de la entrada ni que haya 0 hallazgos. Sirve para que nadie, tampoco nosotros, pueda presentar más tarde un informe distinto como si hubiera existido antes. Solo sale de nuestro servidor la huella. Si una autoridad no responde, se vuelve a pedir en los días siguientes (hasta 7).
@@ -161,6 +165,10 @@ Hourly lines are published during the day; their timestamp protection arrives wi
 ### Baselines
 
 `baseline.json` is the latest full test: its date, its fingerprint, each component's hash and the reason for the change (`reason`). Every baseline is also kept in `baselines/<when>.json`, never overwritten, so the history of when and why the baseline changed is public.
+
+### Notes
+
+`notes.json` explains, in Spanish and English, why the badge is not green on a given day: `{ "notes": [{ "date": "YYYY-MM-DD", "es": "…", "en": "…" }] }`. The owner writes them by hand, with no company or person names. The badge and the "How we check" page show the note for the latest entry's date only while the badge is not green. A note is not part of the chain and changes no count and no colour: it is an explanation, not a result.
 
 ### Timestamps (RFC 3161)
 
