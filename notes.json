@@ -2,12 +2,12 @@
     "notes": [
       {
         "date": "2026-11-24",
-        "es": "Hallazgos de pruebas internas nuestras, no de visitantes. Una tarea interna de verificación consultaba el registro con la empresa en 
-  la dirección (corregido el 25-11-2026, #576), y una consulta manual de prueba sin clave, que el servidor rechazó, se contaba como 
-  hallazgo (desde el 25-11 los rechazos se cuentan aparte, #577).",
-        "en": "Findings from our own internal tests, not from visitors. An internal verification task queried the registry with the company in the 
-  address (fixed 25 Nov 2026, #576), and an unkeyed manual test query, refused by the server, was counted as a finding (refusals are 
-  counted apart since 25 Nov, #577)."
+        "es": "Hallazgos de pruebas internas nuestras, no de visitantes. Una tarea interna de verificación consultaba el registro con la
+  empresa en la dirección (corregido el 25-11-2026, #576), y una consulta manual de prueba sin clave, que el servidor rechazó, se contaba
+  como hallazgo (desde el 25-11 los rechazos se cuentan aparte, #577).",
+        "en": "Findings from our own internal tests, not from visitors. An internal verification task queried the registry with the company
+  in the address (fixed 25 Nov 2026, #576), and an unkeyed manual test query, refused by the server, was counted as a finding (refusals
+  are counted apart since 25 Nov, #577)."
       }
     ]
   }
